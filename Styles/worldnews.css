@@ -1,0 +1,246 @@
+body{
+    margin: 0;
+}
+/*header*/
+
+header{
+    width: 100%;
+    box-shadow: 0 0 5px;
+    height: 70px;
+}
+header div{
+    display: flex;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 70px;
+    text-align: center;
+}
+header button{
+    background: transparent;
+    color: DimGray;
+    outline: none;
+    border: none;
+    margin: auto;
+    width: 110px;
+    font-size: 120%;
+    font-weight: lighter;
+    height: inherit;
+    transition: 0.2s;
+}
+header button:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+#worldnews{ transform: scale(1.4); }
+
+/*main*/
+
+main #loader{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #f3f3f3; /* Light grey */
+    border-top: 2px solid #f1c195;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: none;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* #worldnews{ transform: scale(1.4); } */
+main #weather > h1{
+    font-size: 250%;
+}
+main #weather > h3{ font-size: 150%; }
+
+main #wcontrols > input{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: inherit;
+    outline: none;
+    border-radius: 15px;
+    border: solid 1px #f1c195;
+    background: transparent;
+    padding: 1%;
+    font-style: italic;
+    color: dimgray;
+    font-size: 110%;
+    transition: 0.2s;
+}
+main #wcontrols > input:hover{ opacity: 0.9; }
+
+main #wcontrols > button{
+    outline: none;
+    border-radius: 15px;
+    border: solid 1px #f1c195;
+    background: transparent;
+    padding: 1%;
+    font-style: italic;
+    color: dimgray;
+    font-size: 120%;
+    transition: 0.2s;
+    margin-top: 1%;
+    cursor: pointer;
+}
+main #wcontrols > button:hover{ opacity: 0.9; }
+
+
+@media screen and (min-width:769px){
+
+    /*main*/
+
+    main #weather{
+        width: 60%;
+        margin-top: 1%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        color: dimgray;
+        font-style: italic;
+        border-radius: 15px;
+        border: solid 1px #f1c195;
+        background-color: rgb(241, 193, 149, 0.2);
+        box-shadow: 0 0 10px;
+        z-index: 2;
+        transition: 1s;
+    }
+    main #weather:hover{
+        transform: rotateX(360deg);
+    }
+    main #wcontrols{
+        width: 60%;
+        margin-top: 1%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    main > #filter{
+        width: 60%;
+        margin-top: 1%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    main > #filter > p{
+        font-size: 125%;
+        font-style: italic;
+        color: dimgray;
+    }
+
+    main #news{
+        width: 60%;
+        margin-top: 1%;
+        margin-left: auto;
+        margin-right: auto;
+        height: calc(100vh - 120px);
+        border-top: solid 1px dimgray;
+        border-bottom: solid 1px dimgray;
+        border-radius: 2px;
+        color: dimgray;
+        font-style: italic;
+        overflow-y: auto;
+        /* box-shadow: inset 0 0 10px rgba(0,0,0,0.5); */
+    }
+
+    /*footer*/
+
+    footer{
+        margin-top: 1%;
+        width: 100%;
+        box-shadow: 0 0 5px;
+        text-align: center;
+    }
+    footer img{
+        width: 7%;
+        transition: 1s;
+    }
+    footer img:hover{
+        transform: rotate(360deg);
+    }
+    footer #about{
+        color: DimGray;
+        margin-bottom: 0;
+        font-size: 120%;
+        cursor: pointer;
+    }
+    footer #about:hover{ opacity: 0.5; }
+    footer p {
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-device-width:480px) and (orientation: portrait){
+    /*main*/
+
+    main #weather{
+        width: 98%;
+        margin-top: 3%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        color: dimgray;
+        font-style: italic;
+        border-radius: 15px;
+        border: solid 1px #f1c195;
+        background-color: rgb(241, 193, 149, 0.2);;
+        box-shadow: 0 0 10px;
+        z-index: 2;
+        transition: 1s;
+    }
+    main #weather:hover{
+        transform: rotateX(360deg);
+    }
+
+    main #wcontrols{
+        width: 98%;
+        margin-top: 2%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    main #news{
+        width: 98%;
+        margin-top: 1%;
+        margin-left: auto;
+        margin-right: auto;
+        min-height: calc(100vh - 120px);
+        border-top: solid 1px dimgray;
+        border-bottom: solid 1px dimgray;
+        border-radius: 2px;
+        color: dimgray;
+        font-style: italic;
+        overflow-y: auto;
+        
+    }
+
+    /*footer*/
+
+    footer{
+        margin-top: 2%;
+        width: 100%;
+        box-shadow: 0 0 5px;
+        text-align: center;
+    }
+    footer img{
+        width: 17%;
+        transition: 1s;
+    }
+    footer img:hover{
+        transform: rotate(360deg);
+    }
+    footer #about{
+        color: DimGray;
+        margin-bottom: 0;
+        font-size: 120%;
+        cursor: pointer;
+    }
+    footer #about:hover{ opacity: 0.5; }
+    footer p {
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="Styles/main.css">
+        <link rel="shortcut icon" href="Images/logoSocialis.png" type="image/png">
+        <title>Главная</title>
+    </head>
+    <body onload="load_page.load()">
+        <header>
+            <div>
+                <button onclick="Navigation.pages('worldnews.html')"><i>WorldNews</i></button>
+                <button id="mn"><i>Главная</i></button>
+                <button onclick="Navigation.pages('i.html')"><i>Я</i></button>
+            </div>
+        </header>
+        <div id="reg">
+            <p>Добро пожаловать!</p>
+            <p>Socialis - это очередная социальная сеть, но без лишних, по моему мнению, элементов. Минимализм, простота, свобода и необходимые функции.</p>
+            <hr size="1">
+            <p id="msg"></p>
+            <p>Вход</p>
+            <input id="name" type="text" placeholder="Ваш логин"><br>
+            <input id="pass" type="password" placeholder="Ваш пароль"><br>
+            <button onclick="reg.input()">Войти</button>
+            <hr size="1">
+            <p id="msg1"></p>
+            <p>Регистрация</p>
+            <input id="name1" type="text" placeholder="Введите логин*" onkeyup="load_page.keyup('#reg #name1')"><br>
+            <sub>*Логин должен быть уникальным! По нему вы будете связаны с людьми</sub><br>
+            <input id="pass1" type="password" placeholder="Введите пароль"><br>
+            <input id="repass1" type="password" placeholder="Повторите пароль"><br>
+            <button onclick="reg.register()">Завести аккаунт</button>
+        </div>
+        <main>
+            <div id="loader"></div>
+            <audio src="Song/msg.mp3" autoplay>
+            </audio>
+            <div id="search">
+                <input type="search" placeholder="Поиск">
+                <button onclick="searchUser.search()">Найти человека</button>
+            </div>
+            <div id="yourmsgs"><p>Ваши переписки</p></div>
+            <p id="msger"></p>
+            <!--<template id="tmplMsgs">
+                <div>
+                    <img src="" alt="">
+                    <p></p>
+                </div>
+            </template>-->
+            <div id="panelMsgs">
+            </div>
+        </main>
+        <footer>
+            <div>
+                <img src="Images/logoSocialis.png">
+                <p id="about">О "Socialis"</p>
+                <p>Copyright © 2020</p>
+            </div>
+        </footer>
+        <script src="Scripts/main.js"></script>
+    </body>
+</html>

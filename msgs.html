@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="Styles/msgs.css">
+        <link rel="shortcut icon" href="Images/logoSocialis.png" type="image/png">
+        <title>Диалоги</title>
+    </head>
+    <body onload="loadPage.page()">
+        <header>
+            <div>
+                <button onclick="navigation.pages('worldnews.html')"><i>WorldNews</i></button>
+                <button id="mn" onclick="navigation.pages('hoster_block.html')"><i>Главная</i></button>
+                <button onclick="navigation.pages('i.html')"><i>Я</i></button>
+            </div>
+        </header>
+        <main>
+            <div id="loader"></div>
+            <audio controls src="Song/msg.mp3">
+            </audio>
+            <div id="back"><button onclick="navigation.back()">< Назад</button></div>
+            <div id="user" onclick="navigation.profileus()">
+                <img src="" alt="">
+                <p></p>
+            </div>
+            <div id="panelMsgs">
+            </div>
+            <div id="controls">
+                <textarea placeholder="Ваш текст"></textarea>
+                <img src="Images/selectFile.png" alt="Выбрать файл" title="Выбрать файл">
+                <button onclick="contentSend.send()">Отправить</button>
+            </div>
+        </main>
+        <footer>
+            <div>
+                <img src="Images/logoSocialis.png">
+                <p id="about">О "Socialis"</p>
+                <p>Copyright © 2020</p>
+            </div>
+        </footer>
+        <script src="Scripts/msgs.js"></script>
+    </body>
+</html>

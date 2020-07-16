@@ -1,0 +1,79 @@
+answert.title = await page.evaluate(() => {
+                 let n = document.querySelectorAll("#__layout > div > div.layout__container > div.layout__page > div > div.grid > div > div > div.grid-cell.cell-row--1.cell-col--8.cell-col-md--8.cell-col-sm--12 > div > div.news-list > div:nth-child(1) > div").length;
+                 let i = 1;
+                 let tElem = [];
+                 while(i <= n){
+                    try{
+                        tElem.push(document.querySelector("#__layout > div > div.layout__container > div.layout__page > div > div.grid > div > div > div.grid-cell.cell-row--1.cell-col--8.cell-col-md--8.cell-col-sm--12 > div > div.news-list > div:nth-child(1) > div:nth-child(" + String(i) + ") > div > a > div > div > div.card-content__info > div.card-content__title").innerText);
+                    }catch(e){
+                        tElem.push("nil");
+                    }
+                    i++;
+                 }
+                 return tElem;
+            });
+            console.log(answert.title);
+/*2*/       answert.shortText = await page.evaluate(() => {
+                let n = document.querySelectorAll("#__layout > div > div.layout__container > div.layout__page > div > div.grid > div > div > div.grid-cell.cell-row--1.cell-col--8.cell-col-md--8.cell-col-sm--12 > div > div.news-list > div:nth-child(1) > div").length;
+                 let i = 1;
+                 let tElem = [];
+                 while(i <= n){
+                    try{
+                        tElem.push(document.querySelector("#__layout > div > div.layout__container > div.layout__page > div > div.grid > div > div > div.grid-cell.cell-row--1.cell-col--8.cell-col-md--8.cell-col-sm--12 > div > div.news-list > div:nth-child(1) > div:nth-child(" + String(i) + ") > div > a > div > div > div.card-content__info > div.card-content__lead").innerText);
+                    }catch(e){
+                        tElem.push("nil");
+                    }
+                    i++;
+                 }
+                 return tElem;
+            });
+            console.log(answert.shortText);
+/*3*/       answert.author = await page.evaluate(() => {
+                let n = document.querySelectorAll("#__layout > div > div.layout__container > div.layout__page > div > div.grid > div > div > div.grid-cell.cell-row--1.cell-col--8.cell-col-md--8.cell-col-sm--12 > div > div.news-list > div:nth-child(1) > div").length;
+                 let i = 1;
+                 let tElem = [];
+                 while(i <= n){
+                    try{
+                        tElem.push(document.querySelector("#__layout > div > div.layout__container > div.layout__page > div > div.grid > div > div > div.grid-cell.cell-row--1.cell-col--8.cell-col-md--8.cell-col-sm--12 > div > div.news-list > div:nth-child(1) > div:nth-child(" + String(i) + ") > div > a > div > div > div.card-content__info > div.card-tools").innerText);
+                    }catch(e){
+                        tElem.push("nil");
+                    }
+                    i++;
+                 }
+                 return tElem;
+            });
+            console.log(answert.author);
+/*4*/       answert.link = await page.evaluate(() => {
+                let n = document.querySelectorAll("#__layout > div > div.layout__container > div.layout__page > div > div.grid > div > div > div.grid-cell.cell-row--1.cell-col--8.cell-col-md--8.cell-col-sm--12 > div > div.news-list > div:nth-child(1) > div").length;
+                 let i = 1;
+                 let tElem = [];
+                 while(i <= n){
+                    try{
+                        tElem.push(document.querySelector("#__layout > div > div.layout__container > div.layout__page > div > div.grid > div > div > div.grid-cell.cell-row--1.cell-col--8.cell-col-md--8.cell-col-sm--12 > div > div.news-list > div:nth-child(1) > div:nth-child(" + String(i) + ") > div > a").href);
+                    }catch(e){
+                        tElem.push("nil");
+                    }
+                    i++;
+                 }
+                 return tElem;
+            });
+            console.log(answert.link);
+/*5*/       answert.img = await page.evaluate(() => {
+                let n = document.querySelectorAll("#__layout > div > div.layout__container > div.layout__page > div > div.grid > div > div > div.grid-cell.cell-row--1.cell-col--8.cell-col-md--8.cell-col-sm--12 > div > div.news-list > div:nth-child(1) > div").length;
+                 let i = 1;
+                 let tElem = [];
+                 while(i <= n){
+                    try{
+                        tElem.push(document.querySelector("#__layout > div > div.layout__container > div.layout__page > div > div.grid > div > div > div.grid-cell.cell-row--1.cell-col--8.cell-col-md--8.cell-col-sm--12 > div > div.news-list > div:nth-child(1) > div:nth-child(" + String(i) + ") > div > a > div > div > div.card-content__picture > img").src);
+                    }catch(e){
+                        tElem.push("nil");
+                    }
+                    i++;
+                 }
+                 return tElem;
+            });
+
+
+
+
+             <img id="iopis1" src="mainimg2.jpg" alt="">

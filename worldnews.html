@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="Styles/worldnews.css">
+        <link rel="shortcut icon" href="Images/logoSocialis.png" type="image/png">
+
+        <script src="http://188.227.86.17/React/react.dev.js"></script>  
+        <script src="http://188.227.86.17/React/react-dom.dev.js"></script>  
+        <script src="http://188.227.86.17/React/babel.js"></script>  
+
+        <title>WorldNews</title>
+    </head>
+    <body onload="load_page.load()">
+        <header>
+            <div>
+                <button id="worldnews" onclick="Navigation.pages('worldnews.html')"><i>WorldNews</i></button>
+                <button onclick="Navigation.pages('hoster_block.html')"><i>Главная</i></button>
+                <button onclick="Navigation.pages('i.html')"><i>Я</i></button>
+            </div>
+        </header>
+        <main>
+            <div id="root"></div>
+            <script type="text/babel" src="Scripts/worldnewsDOM.jsx"></script>  
+            <div id="loader"></div>
+            <div id="weather">
+                <h3 id="city">Погода</h3>
+                <h4 id="time"></h4>
+                <h1>-273°</h1>
+                <h3 id="type"></h3>
+                <h4 id="verot"></h4>
+            </div>
+            <div id="wcontrols">
+                <input type="text" placeholder="Введите место вашего пребывания*">
+                <button>Узнать погоду</button>
+                <p>*Сайт хранит данные о месте только в хранилище браузера</p>
+                <hr size="1">
+            </div>
+            <div id="filter">
+                <p>Все разделы</p>
+            </div>
+            <div id="news">
+                
+            </div>
+        </main>
+        <footer>
+            <div>
+                <img src="Images/logoSocialis.png">
+                <p id="about">О "Socialis"</p>
+                <p>Copyright © 2020</p>
+            </div>
+        </footer>
+        <script src="Scripts/worldnews.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </body>
+</html>

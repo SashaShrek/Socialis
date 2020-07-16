@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="Styles/i.css">
+        <link rel="shortcut icon" href="Images/logoSocialis.png" type="image/png">
+        <title>Я</title>
+    </head>
+    <body onload="load_page.load()">
+        <header>
+            <div>
+                <button onclick="Navigation.pages('worldnews.html')"><i>WorldNews</i></button>
+                <button onclick="Navigation.pages('hoster_block.html')"><i>Главная</i></button>
+                <button id="i"><i>Я</i></button>
+            </div>
+        </header>
+        <main>
+            <div id="profile">
+                <input id="fil" type="file" style="display: none;" accept="image/png">
+                <label for="fil"><img id="image" src="Images/logoSocialis.png" alt=""></label>
+                <p id="name">Name</p>
+                <p id="about">Ваша подпись (краткая информация)</p>
+                <hr size="1">
+                <p id="msg"></p>
+                <input id="newabout" type="text" placeholder="О себе" maxlength="50"><br><br>
+                <input id="pass" type="password" placeholder="Новый пароль"><br><br>
+                <input id="repass" type="password" placeholder="Старый пароль"><br><br>
+                <button onclick="data_user.newdata()">Сохранить</button><br><br>
+                <button onclick="Navigation.exit()">Выход</button>
+            </div>
+        </main>
+        <footer>
+            <div>
+                <img src="Images/logoSocialis.png">
+                <p id="about">О "Socialis"</p>
+                <p>Copyright © 2020</p>
+            </div>
+        </footer>
+        <script src="Scripts/i.js"></script>
+    </body>
+</html>

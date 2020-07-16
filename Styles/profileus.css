@@ -1,0 +1,188 @@
+body{
+    margin: 0;
+}
+
+/*header*/
+
+header{
+    width: 100%;
+    box-shadow: 0 0 5px;
+    height: 70px;
+}
+header div{
+    display: flex;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 70px;
+    text-align: center;
+}
+header button{
+    background: transparent;
+    color: DimGray;
+    outline: none;
+    border: none;
+    margin: auto;
+    width: 110px;
+    font-size: 120%;
+    font-weight: lighter;
+    height: inherit;
+    transition: 0.2s;
+}
+header button:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+#user{ transform: scale(1.4); }
+
+/*main*/
+
+main{
+    width: 100%;
+}
+main #profile > p{
+    color: dimgray;
+    font-size: 120%;
+    font-style: italic;
+}
+
+@media screen and (min-width:769px){
+
+    main #profile{
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1%;
+        text-align: center;
+        height: calc(100vh - 70px);
+    }
+    main #profile a > img{
+        width: 15vw;
+        height: 15vw;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 1s;
+    }
+    main #profile a > img:hover{ transform: rotateY(180deg); }
+    main #profile > #name{
+        font-size: 170%;
+        color: DimGray;
+    }
+    main #profile > #about{
+        color: DimGray;
+        font-size: 120%;
+        font-style: italic;
+    }
+    main #profile > button{
+        margin-top: 2%;
+        font-style: italic;
+        background: transparent;
+        color: DimGray;
+        outline: none;
+        font-size: 115%;
+        border-radius: 20px;
+        border: solid 1px #ff7b00;
+        vertical-align: middle;
+        cursor: pointer;
+        padding: 1%;
+        transition: 0.2s;
+    }
+    main #profile > button:hover{ opacity: 0.5; }
+
+    /*footer*/
+
+    footer{
+        margin-top: 1%;
+        width: 100%;
+        box-shadow: 0 0 5px;
+        text-align: center;
+    }
+    footer img{
+        width: 7%;
+        transition: 1s;
+    }
+    footer img:hover{
+        transform: rotate(360deg);
+    }
+    footer #about{
+        color: DimGray;
+        margin-bottom: 0;
+        font-size: 120%;
+        cursor: pointer;
+    }
+    footer #about:hover{ opacity: 0.5; }
+    footer p {
+        margin-bottom: 0;
+    }
+}
+
+
+@media screen and (max-device-width:480px) and (orientation: portrait){
+
+    main #profile{
+        width: 98%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1%;
+        text-align: center;
+        height: calc(100vh - 70px);
+    }
+    main #profile a > img{
+        width: 40vw;
+        height: 40vw;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 1s;
+    }
+    main #profile a > img:hover{ transform: rotateY(180deg); }
+    main #profile > #name{
+        font-size: 170%;
+        color: DimGray;
+    }
+    main #profile > #about{
+        color: DimGray;
+        font-size: 120%;
+        font-style: italic;
+    }
+    main #profile > button{
+        margin-top: 2%;
+        font-style: italic;
+        background: transparent;
+        color: DimGray;
+        outline: none;
+        font-size: 115%;
+        border-radius: 20px;
+        border: solid 1px #ff7b00;
+        vertical-align: middle;
+        cursor: pointer;
+        padding: 1%;
+        transition: 0.2s;
+    }
+    main #profile > button:hover{ opacity: 0.5; }
+
+    /*footer*/
+
+    footer{
+        margin-top: 1%;
+        width: 100%;
+        box-shadow: 0 0 5px;
+        text-align: center;
+    }
+    footer img{
+        width: 17%;
+        transition: 1s;
+    }
+    footer img:hover{
+        transform: rotate(360deg);
+    }
+    footer #about{
+        color: DimGray;
+        margin-bottom: 0;
+        font-size: 120%;
+        cursor: pointer;
+    }
+    footer #about:hover{ opacity: 0.5; }
+    footer p {
+        margin-bottom: 0;
+    }
+}

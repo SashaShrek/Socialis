@@ -1,0 +1,326 @@
+body{
+    margin: 0;
+}
+
+/*header*/
+
+header{
+    width: 100%;
+    box-shadow: 0 0 5px;
+    height: 70px;
+}
+header div{
+    display: flex;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 70px;
+    text-align: center;
+}
+header button{
+    background: transparent;
+    color: DimGray;
+    outline: none;
+    border: none;
+    margin: auto;
+    width: 110px;
+    font-size: 120%;
+    font-weight: lighter;
+    height: inherit;
+    transition: 0.2s;
+}
+header button:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+#mn{ transform: scale(1.4); }
+
+/*............*/
+
+#reg p{
+    color: dimgray;
+    font-size: 135%;
+}
+#reg input{
+    background: transparent;
+    border: solid 1px dimgray;
+    color: dimgray;
+    border-radius: 15px;
+    font-size: 115%;
+    text-indent: 2%;
+    outline: none;
+    margin-top: 1%;
+}
+#reg input:focus{ border: solid 1px #f1c195; }
+#reg button{
+    background: transparent;
+    color: DimGray;
+    outline: none;
+    font-size: 115%;
+    border-radius: 20px;
+    border: solid 1px #ff7b00;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+#reg button:hover{ opacity: 0.5; }
+
+#reg #msg, #reg #msg1{ color: black; }
+
+/*main*/
+
+main{
+    width: 100%;
+}
+main #loader{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #f3f3f3; /* Light grey */
+    border-top: 2px solid #f1c195;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: none;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+main audio{
+    display: none;
+}
+main #yourmsgs{
+    text-align: center;
+    margin-top: 2%;
+    color: DimGray;
+    font-size: 130%;
+    font-style: italic;
+}
+main #msger{
+    text-align: center;
+    margin-top: 2%;
+    color: DimGray;
+    font-size: 120%;
+    font-style: italic;
+}
+
+@media screen and (min-width:769px){
+
+    #reg{
+        position: relative;
+        width: 30%;
+        margin-left: 33%;
+        background-color: white;
+        box-shadow: 0 0 5px;
+        text-align: center;
+        z-index: 2;
+        border-radius: 10px;
+        margin-top: calc(15vh - 70px);
+        display: none;
+        padding: 2%;
+    }
+    
+
+    /*main*/
+
+    main #search{
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+        margin-top: 1%;
+    }
+    main #search > input{
+        background: transparent;
+        border: solid 1px darkgray;
+        color: darkgray;
+        border-radius: 15px;
+        font-size: 115%;
+        text-indent: 2%;
+        outline: none;
+        vertical-align: middle;
+        width: inherit;
+    }
+    main #search > input:focus{ border: solid 1px #f1c195; }
+    main #search > button{
+        background: transparent;
+        color: DimGray;
+        outline: none;
+        font-size: 115%;
+        border-radius: 20px;
+        border: solid 1px #ff7b00;
+        vertical-align: middle;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    main #search > button:hover{ opacity: 0.5; }
+    main #panelMsgs{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2%;
+        padding-top: 1%;
+        width: 60%;
+        height: calc(100vh - 120px);
+        border-top: solid 1px DimGray;
+        border-bottom: solid 1px DimGray;
+        border-radius: 5px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    main #panelMsgs > div{
+        display: flex;
+        margin-left: 1%;
+        border: solid 1px #f1c195;
+        border-radius: 15px;
+        padding-left: 1%;
+        cursor: pointer;
+        transition: 0.2s;
+        margin-bottom: 1%;
+    }
+    main #panelMsgs > div:hover{ zoom: 1.1; }
+    main #panelMsgs div > img { width: 5vw; height: 5vw; vertical-align: middle; border-radius: 50%; }
+    main #panelMsgs div > p { 
+        color: DimGray;
+        font-size: 115%;
+        vertical-align: middle;
+        margin: auto;
+     }
+
+    /*footer*/
+
+    footer{
+        margin-top: 1%;
+        width: 100%;
+        box-shadow: 0 0 5px;
+        text-align: center;
+    }
+    footer img{
+        width: 7%;
+        transition: 1s;
+    }
+    footer img:hover{
+        transform: rotate(360deg);
+    }
+    footer #about{
+        color: DimGray;
+        margin-bottom: 0;
+        font-size: 120%;
+        cursor: pointer;
+    }
+    footer #about:hover{ opacity: 0.5; }
+    footer p {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-device-width:480px) and (orientation: portrait){
+
+    #reg{
+        position: relative;
+        width: 90%;
+        margin-left: 3%;
+        background-color: white;
+        box-shadow: 0 0 5px;
+        text-align: center;
+        z-index: 2;
+        border-radius: 10px;
+        margin-top: calc(20vh - 70px);
+        display: none;
+        padding: 2%;
+    }
+
+    /*main*/
+
+    main #search{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        margin-top: 1%;
+        text-align: center;
+    }
+    main #search > input{
+        background: transparent;
+        border: solid 1px darkgray;
+        color: darkgray;
+        border-radius: 15px;
+        font-size: 115%;
+        text-indent: 2%;
+        outline: none;
+        vertical-align: middle;
+        width: 98%;
+    }
+    main #search > input:focus{ border: solid 1px #f1c195; }
+    main #search > button{
+        background: transparent;
+        color: DimGray;
+        outline: none;
+        font-size: 115%;
+        border-radius: 20px;
+        border: solid 1px #ff7b00;
+        vertical-align: middle;
+        cursor: pointer;
+        transition: 0.2s;
+        margin-top: 1%;
+    }
+    main #search > button:hover{ opacity: 0.5; }
+    main #panelMsgs{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2%;
+        padding-top: 1%;
+        width: 98%;
+        height: calc(100vh - 120px);
+        border-top: solid 1px DimGray;
+        border-bottom: solid 1px DimGray;
+        border-radius: 5px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    main #panelMsgs > div{
+        display: flex;
+        margin-left: 1%;
+        border: solid 1px #f1c195;
+        border-radius: 15px;
+        padding-left: 1%;
+        cursor: pointer;
+        height: 5vh;
+        transition: 0.2s;
+    }
+    main #panelMsgs > div:hover{ zoom: 1.1; }
+    main #panelMsgs div > img { width: 5vh; height: 5vh; vertical-align: middle; border-radius: 50%; }
+    main #panelMsgs div > p { 
+        color: DimGray;
+        font-size: 115%;
+        vertical-align: middle;
+        margin: auto;
+     }
+
+    /*footer*/
+
+    footer{
+        margin-top: 1%;
+        width: 100%;
+        box-shadow: 0 0 5px;
+        text-align: center;
+    }
+    footer img{
+        width: 17%;
+        transition: 1s;
+    }
+    footer img:hover{
+        transform: rotate(360deg);
+    }
+    footer #about{
+        color: DimGray;
+        margin-bottom: 0;
+        font-size: 120%;
+        cursor: pointer;
+    }
+    footer #about:hover{ opacity: 0.5; }
+    footer p {
+        margin-bottom: 0;
+    }
+}
